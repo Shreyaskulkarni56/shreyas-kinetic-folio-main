@@ -14,7 +14,6 @@ const projects = [
 		githubUrl:
 			'https://github.com/Shreyaskulkarni56/-Real-time-Currency-Convertor-',
 		completionDate: '2023-12-15',
-		progress: 100,
 		startDate: '2023-11-01',
 	},
 	{
@@ -26,7 +25,6 @@ const projects = [
 		demoUrl: 'https://ayushveda.example.com',
 		githubUrl: 'https://github.com/Shreyaskulkarni56/shreyas-kinetic-folio',
 		completionDate: '2023-12-15',
-		progress: 100,
 		startDate: '2023-11-01',
 	},
 	{
@@ -38,7 +36,6 @@ const projects = [
 		demoUrl: 'https://ayushveda.example.com',
 		githubUrl: 'https://github.com/Shreyaskulkarni56/AyshuVeda-',
 		completionDate: '2023-12-15',
-		progress: 100,
 		startDate: '2023-11-01',
 	},
 ];
@@ -82,35 +79,8 @@ export const Projects = () => {
 						>
 							{/* Card */}
 							<div className="relative h-full bg-card rounded-2xl p-8 border border-border overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_hsl(var(--primary)/0.2)]">
-								{/* Add circular progress and date section */}
-								<div className="absolute top-4 right-4 flex items-center gap-4">
-									<div className="relative w-12 h-12">
-										<svg className="w-full h-full transform -rotate-90">
-											<circle
-												cx="24"
-												cy="24"
-												r="20"
-												stroke="currentColor"
-												strokeWidth="4"
-												fill="transparent"
-												className="text-primary/20"
-											/>
-											<circle
-												cx="24"
-												cy="24"
-												r="20"
-												stroke="currentColor"
-												strokeWidth="4"
-												fill="transparent"
-												strokeDasharray={`${project.progress * 1.26} 126`}
-												className="text-primary"
-											/>
-										</svg>
-										<span className="absolute inset-0 flex items-center justify-center text-xs font-medium">
-											{project.progress}%
-										</span>
-									</div>
-
+								{/* Expand button */}
+								<div className="absolute top-4 right-4">
 									<button
 										onClick={() =>
 											setExpandedIndex(
