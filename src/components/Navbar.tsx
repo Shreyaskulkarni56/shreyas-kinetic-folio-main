@@ -129,7 +129,7 @@ export const Navbar = () => {
                   <Menu className="w-5 h-5 text-primary" />
                 </motion.button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="top" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col gap-6 mt-8">
                   <div className="text-2xl font-heading font-bold mb-4">
                     <span className="text-gradient">SK</span>
