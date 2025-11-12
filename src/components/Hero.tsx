@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import About from '@/components/About';
+import { RealTimeClock } from '@/components/RealTimeClock';
 
 export const Hero = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export const Hero = () => {
 
   return (
     <>
+      <RealTimeClock />
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background">
@@ -34,7 +36,7 @@ export const Hero = () => {
 
         {/* Content */}
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center">
+          <div className="text-Right ">
             {/* Main Heading */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -53,7 +55,7 @@ export const Hero = () => {
                   repeatType: "reverse",
                   repeatDelay: 2
                 }}
-                className="flex justify-center mb-6"
+                className="flex Right mb-6"
               >
                 <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg">
                   <span className="mr-2 h-2 w-2 rounded-full bg-white animate-pulse"/>
@@ -65,24 +67,23 @@ export const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-lg md:text-xl text-muted-foreground font-display"
+                className="text-3xl md:text-xl text-muted-foreground font-bold font-display"
               >
-                Hey, I'm
+                Hi, I'm 
               </motion.p>
               
               <motion.h1
-                className="text-5xl md:text-7xl lg:text-8xl font-bold font-display"
+                className="text-5xl md:text-5xl lg:text-5xl font-bold font-display"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3, duration: 0.8, type: 'spring' }}
               >
-                <span className="text-primary glow-effect">Shreyas Kulkarni</span>
+                <span className="text font-serif">Shreyas Kulkarni</span>
                 <motion.span
                   className="inline-block ml-4"
-                  animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
                   transition={{ delay: 1, duration: 2, repeat: Infinity, repeatDelay: 3 }}
                 >
-                  👋
+                  <span className="text font-serif">- A FullStack web Developer</span>
                 </motion.span>
               </motion.h1>
 
@@ -90,9 +91,10 @@ export const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-xl md:text-2xl text-muted-foreground font-display max-w-3xl mx-auto"
+                className="text-3xl md:text-3xl lg:text-3xl font-display"
               >
-                A passionate <span className="text-primary font-semibold">FullStack Developer</span> 
+                 <p>I build interactive web apps using <span className="text-primary">JavaScript</span>,<span className="text-primary">React.js</span>,</p> 
+                 {/* <span className="text-primary">Node.js</span>.*/}
               </motion.p>
             </motion.div>
 
@@ -101,7 +103,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="mt-12 flex flex-wrap gap-4 justify-center"
+              className="mt-12 flex flex-wrap gap-4 justify-right"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}

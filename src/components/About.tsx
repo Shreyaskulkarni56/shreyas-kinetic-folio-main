@@ -65,7 +65,7 @@ export const About = () => {
                   transition={{ type: 'spring', stiffness: 300 }}
                   className="relative"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-50" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-0" />
                   <div className="relative w-48 h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden backdrop-blur-sm">
                     <img
                       src={profileImg}

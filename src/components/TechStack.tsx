@@ -74,15 +74,22 @@ export const TechStack = () => {
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex flex-col items-center justify-center p-4 gap-3">
+                    {/* Icon: smaller size + subtle horizontal oscillation */}
                     <motion.div
-                      whileHover={{
-                        scale: 1.2,
-                        rotate: 360,
-                        transition: { duration: 0.6 }
+                      initial={{ x: 0 }}
+                      animate={isInView ? { x: [-4, 4, -4] } : {}}
+                      transition={{
+                        duration: 2.4,
+                        repeat: Infinity,
+                        ease: 'easeInOut',
+                        delay: index * 0.08,
                       }}
+                      whileHover={{ scale: 1.25 }}
+                      aria-hidden
                     >
-                      <tech.icon className="w-8 h-8 text-primary group-hover:text-primary transition-colors" />
+                      <tech.icon className="w-4 h-4 text-primary group-hover:text-primary transition-colors" />
                     </motion.div>
+
                     <h3 className="text-center text-sm font-semibold text-foreground/90 group-hover:text-primary transition-colors">
                       {tech.name}
                     </h3>
