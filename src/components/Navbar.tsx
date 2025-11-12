@@ -8,9 +8,9 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
-
 const navItems = [
   { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Work', href: '/work' },
   { name: 'Projects', href: '/projects' },
   { name: 'Contact', href: '/contact' },
@@ -58,15 +58,8 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-2xl font-heading font-bold"
-          >
-            <span className="text-gradient">SK</span>
-          </motion.div>
+          {/* Logo removed - keep a minimal spacer to preserve layout */}
+          <div aria-hidden className="w-0" />
 
           {/* Desktop Nav Items */}
           <div className="hidden md:flex items-center gap-8">
@@ -131,9 +124,7 @@ export const Navbar = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col gap-6 mt-8">
-                  <div className="text-2xl font-heading font-bold mb-4">
-                    <span className="text-gradient">SK</span>
-                  </div>
+                  {/* Logo removed from mobile sheet */}
                   {navItems.map((item, index) => {
                     const isActive = location.pathname === item.href;
                     

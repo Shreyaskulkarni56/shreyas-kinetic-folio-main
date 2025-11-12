@@ -1,14 +1,31 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Github, Linkedin, Mail, ExternalLink, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import profileImg from '@/assets/profile/01SU22AI108 Shreyas g Kulkarni.png';
 
 export const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const navigate = useNavigate();
 
   return (
     <section id="about" className="py-20 md:py-32 bg-card/50" ref={ref}>
       <div className="container mx-auto px-6">
+        {/* Back Button
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          onClick={() => navigate('/')}
+          className="mb-8 flex items-center gap-2 text-primary hover:text-accent transition-colors font-medium"
+          aria-label="Go back to home"
+        >
+          <ArrowLeft className="w-5 h-5" />
+          Back to Home
+        </motion.button> */}
+
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -33,21 +50,61 @@ export const About = () => {
           />
 
           <div className="grid md:grid-cols-3 gap-12 items-center">
-            {/* Profile Image */}
+            {/* Profile Image and Languages */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.4 }}
-              className="flex justify-center md:justify-start"
+              className="flex flex-col items-center md:items-start"
             >
+              {/* Profile Image */}
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                className="relative"
+                initial={{ opacity: 0, x: -50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.4 }}
+                className="flex justify-center md:justify-start w-full"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-50" />
-                <div className="relative w-48 h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden backdrop-blur-sm">
-                  <span className="text-6xl font-bold text-gradient">SK</span>
+                <motion.div
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-xl opacity-50" />
+                  <div className="relative w-48 h-48 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary/30 flex items-center justify-center overflow-hidden backdrop-blur-sm">
+                    <img
+                      src={profileImg}
+                      alt="Shreyas Kulkarni"
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                  </div>
+                </motion.div>
+              </motion.div>
+
+              {/* Languages Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.8 }}
+                className="mt-8 w-full"
+              >
+                <div className="flex flex-wrap gap-3">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
+                    title="English"
+                  >
+                    <span className="text-sm font-medium text-primary">English</span>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
+                    title="Hindi"
+                  >
+                    <span className="text-sm font-medium text-primary">Kannada</span>
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
+                    title="Kannada"
+                  >
+                    <span className="text-sm font-medium text-primary">Hindi</span>
+                  </motion.div>
                 </div>
               </motion.div>
             </motion.div>
@@ -59,42 +116,59 @@ export const About = () => {
               transition={{ delay: 0.5 }}
               className="md:col-span-2 space-y-6"
             >
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                I'm a developer with experience in building{' '}
-                <span className="text-primary font-semibold">AI-powered</span> and{' '}
-                <span className="text-secondary font-semibold">web-based applications</span>.
-              </p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2">Shreyas Kulkarni</h1>
               
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                I love blending <span className="text-primary font-semibold">creativity with technology</span> — 
-                from crafting clean UI/UX to integrating machine learning into real-world apps.
-              </p>
+              {/* Social Media Links */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.6 }}
+                className="flex gap-4 items-center"
+              >
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:shreyaskulkarni051@gmail.com"
+                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://your-portfolio.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
+                  aria-label="Portfolio"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+              </motion.div>
 
               <p className="text-lg text-foreground/80 leading-relaxed">
-                My passion lies in creating solutions that are not only functional but also 
-                <span className="text-gradient font-semibold"> beautiful and intuitive</span>.
+                "I'm a 4th-year AIML engineering student at Srinivas Institute of Technology.I'm passionate about technology and love building clean, functional web applications. 
+                I enjoy turning ideas into real products and constantly explore Machine Learning to understand how intelligent systems work.
+                I focus on web development,AI-assisted building, and diving deeper into ML concepts to create smarter digital experiences."
               </p>
 
               {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.7 }}
-                className="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-border"
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient">15+</div>
-                  <div className="text-sm text-muted-foreground mt-1">Projects</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient">3+</div>
-                  <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient">10+</div>
-                  <div className="text-sm text-muted-foreground mt-1">Technologies</div>
-                </div>
-              </motion.div>
+              
             </motion.div>
           </div>
         </motion.div>
@@ -102,3 +176,4 @@ export const About = () => {
     </section>
   );
 };
+export default About;
