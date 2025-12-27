@@ -16,17 +16,17 @@ const projects = [
 		completionDate: '2023-12-15',
 		startDate: '2023-11-01',
 	},
-	{
-		title: 'Portfolio Website',
-		description:
-			'Modern, animated portfolio with smooth transitions and beautiful UI.',
-		tags: ['React', 'Framer Motion', 'Tailwind'],
-		gradient: 'from-orange-500 to-red-500',
-		demoUrl: 'https://ayushveda.example.com',
-		githubUrl: 'https://github.com/Shreyaskulkarni56/shreyas-kinetic-folio',
-		completionDate: '2023-12-15',
-		startDate: '2023-11-01',
-	},
+	// {
+	// 	title: 'Portfolio Website',
+	// 	description:
+	// 		'Modern, animated portfolio with smooth transitions and beautiful UI.',
+	// 	tags: ['React', 'Framer Motion', 'Tailwind'],
+	// 	gradient: 'from-orange-500 to-red-500',
+	// 	demoUrl: 'https://ayushveda.example.com',
+	// 	githubUrl: 'https://github.com/Shreyaskulkarni56/shreyas-kinetic-folio',
+	// 	completionDate: '2023-12-15',
+	// 	startDate: '2023-11-01',
+	// },
 	{
 		title: 'Ayushveda Web App',
 		description:

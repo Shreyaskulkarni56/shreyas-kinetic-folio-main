@@ -44,11 +44,11 @@ export const Hero = () => {
         {/* Animated Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-2xl"
             animate={{
               x: [0, 100, 0],
               y: [0, 50, 0],
-              scale: [1, 1.2, 1],
+              scale: [1, 1.15, 1],
             }}
             transition={{
               duration: 20,
@@ -57,11 +57,11 @@ export const Hero = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-2xl"
             animate={{
               x: [0, -100, 0],
               y: [0, -50, 0],
-              scale: [1, 1.2, 1],
+              scale: [1, 1.15, 1],
             }}
             transition={{
               duration: 25,
@@ -97,8 +97,8 @@ export const Hero = () => {
               }}
             >
               <div className="group relative">
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:bg-primary/40 transition-colors"></div>
-                <div className="relative bg-background/80 backdrop-blur-md p-4 rounded-2xl border border-primary/30 shadow-xl group-hover:border-primary/60 transition-all">
+                <div className="absolute inset-0 bg-primary/10 rounded-full blur-lg group-hover:bg-primary/20 transition-colors"></div>
+                <div className="relative bg-background/80 backdrop-blur-md p-4 rounded-2xl border border-primary/20 shadow-lg group-hover:border-primary/40 transition-all">
                   <Icon className="w-8 h-8 text-primary" />
                 </div>
               </div>
@@ -107,7 +107,7 @@ export const Hero = () => {
         })}
 
         {/* Main Content */}
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-8">
             {/* Available Badge */}
             <motion.div
@@ -118,13 +118,13 @@ export const Hero = () => {
               <motion.div
                 animate={{
                   boxShadow: [
+                    '0 0 10px rgba(34, 197, 94, 0.3)',
                     '0 0 20px rgba(34, 197, 94, 0.5)',
-                    '0 0 40px rgba(34, 197, 94, 0.8)',
-                    '0 0 20px rgba(34, 197, 94, 0.5)',
+                    '0 0 10px rgba(34, 197, 94, 0.3)',
                   ],
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-green-500 via-emerald-500 to-green-500 text-white font-semibold text-sm backdrop-blur-sm border border-green-400/50"
+                className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-green-500 via-emerald-500 to-green-500 text-white font-semibold text-sm backdrop-blur-sm border border-green-400/30"
               >
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
@@ -146,23 +146,23 @@ export const Hero = () => {
             </motion.p>
 
             {/* Name */}
-            <div className="flex items-center justify-center gap-2 md:gap-4 lg:gap-6 flex-nowrap overflow-hidden px-4">
+            <div className="w-full flex items-center justify-center gap-2 md:gap-4 lg:gap-6 flex-wrap md:flex-nowrap px-8 md:px-12 lg:px-16 py-4">
               {/* Shreyas - Animates from left */}
               <motion.h1
-                initial={{ opacity: 0, x: -300 }}
+                initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 1.2, type: 'spring', stiffness: 80, damping: 12 }}
-                className="text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-white via-primary to-primary bg-clip-text text-transparent whitespace-nowrap"
+                className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-white via-primary to-primary bg-clip-text text-transparent whitespace-nowrap"
               >
                 Shreyas
               </motion.h1>
               
               {/* Kulkarni - Animates from right */}
               <motion.h1
-                initial={{ opacity: 0, x: 300 }}
+                initial={{ opacity: 0, x: 200 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4, duration: 1.2, type: 'spring', stiffness: 80, damping: 12 }}
-                className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-secondary bg-clip-text text-transparent whitespace-nowrap"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-secondary bg-clip-text text-transparent whitespace-nowrap"
               >
                 Kulkarni
               </motion.h1>
@@ -220,10 +220,10 @@ export const Hero = () => {
               className="flex flex-wrap gap-4 justify-center pt-4"
             >
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(59, 130, 246, 0.5)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(59, 130, 246, 0.3)' }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/work')}
-                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary via-blue-500 to-secondary text-white font-semibold text-lg shadow-2xl relative overflow-hidden group"
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary via-blue-500 to-secondary text-white font-semibold text-lg shadow-lg relative overflow-hidden group"
               >
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity"
@@ -232,7 +232,7 @@ export const Hero = () => {
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(59, 130, 246, 0.3)' }}
+                whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(59, 130, 246, 0.2)' }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/contact')}
                 className="px-8 py-4 rounded-full border-2 border-primary text-primary font-semibold text-lg bg-background/40 backdrop-blur-md hover:bg-primary hover:text-white transition-all"

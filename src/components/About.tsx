@@ -52,14 +52,14 @@ export const About = () => {
           <div className="grid md:grid-cols-3 gap-12 items-center">
             {/* Profile Image and Languages */}
             <motion.div
-              className="flex flex-col items-center md:items-start"
+              className="flex flex-col items-center"
             >
               {/* Profile Image */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.4 }}
-                className="flex justify-center md:justify-start w-full"
+                className="flex justify-center w-full"
               >
                 <motion.div
                   transition={{ type: 'spring', stiffness: 300 }}
@@ -83,7 +83,7 @@ export const About = () => {
                 transition={{ delay: 0.8 }}
                 className="mt-8 w-full"
               >
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 justify-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
@@ -94,14 +94,14 @@ export const About = () => {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
-                    title="Hindi"
+                    title="Kannada"
                   >
                     <span className="text-sm font-medium text-primary">Kannada</span>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className="w-auto px-3 py-2 rounded-full bg-card border border-primary/30 flex items-center justify-center hover:bg-accent transition-colors cursor-default"
-                    title="Kannada"
+                    title="Hindi"
                   >
                     <span className="text-sm font-medium text-primary">Hindi</span>
                   </motion.div>
@@ -116,11 +116,11 @@ export const About = () => {
               transition={{ delay: 0.5 }}
               className="md:col-span-2 space-y-6"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">Shreyas Kulkarni</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center md:text-left">Shreyas Kulkarni</h1>
               
-              <p className="text-lg text-foreground/80 leading-relaxed">
-              "As a fourth-year AIML student at Srinivas Institute of Technology, I’m a motivated learner with a strong passion for AI,
-               Machine Learning, and software development. I’ve led and managed projects, and I enjoy tackling complex problems to build 
+              <p className="text-lg text-foreground/80 leading-relaxed text-justify">
+              "As a fourth-year AIML student at Srinivas Institute of Technology, I'm a motivated learner with a strong passion for AI,
+               Machine Learning, and software development. I've led and managed projects, and I enjoy tackling complex problems to build 
                meaningful solutions. Outside academics,I love finding ways to blend creativity with technology and continually keep growing 
                as the field advances."
               </p>

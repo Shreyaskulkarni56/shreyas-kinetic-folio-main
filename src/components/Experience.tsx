@@ -1,9 +1,16 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Briefcase, Code } from 'lucide-react';
+import { Briefcase, Code, GraduationCap, Award, Users, Rocket } from 'lucide-react';
 
 const experiences = [
+  {
+    title: 'Fullstack Web Developer',
+    company: 'Armtronix Pvt Ltd',
+    period: 'Dec 2025 - Present',
+    description: 'Working on Iot-based and AI-integrated web applications and optimized user interaction.',
+    icon: Briefcase, // Choose from: Briefcase, Code, GraduationCap, Award, Users, Rocket
+  },
   {
     title: 'Software Intern',
     company: 'Ultimez Technologies',
@@ -18,6 +25,9 @@ const experiences = [
     description: 'Built dynamic websites using React, Next.js, and Tailwind CSS. Developed backend APIs and database solutions.',
     icon: Code,
   },
+  // Add more experiences below - just copy the structure above
+  // Example template:
+ 
 ];
 
 export const Experience = () => {
@@ -76,7 +86,16 @@ export const Experience = () => {
                       <div className="flex-1">
                         <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
                         <p className="text-primary font-semibold mb-2">{exp.company}</p>
-                        <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
+                        <p className="text-sm text-muted-foreground mb-3">
+                          {exp.period.includes('Present') ? (
+                            <>
+                              {exp.period.split('Present')[0]}
+                              <span className="blur-[5px]">Present</span>
+                            </>
+                          ) : (
+                            exp.period
+                          )}
+                        </p>
                         <p className="text-foreground/80 leading-relaxed">{exp.description}</p>
                       </div>
                     </div>
