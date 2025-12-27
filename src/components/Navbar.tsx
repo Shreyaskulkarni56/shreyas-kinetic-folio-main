@@ -5,7 +5,7 @@ import { Moon, Sun, Menu } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import {
   Sheet,
-  SheetContent,
+  SheetContent, 
   SheetTrigger,
 } from '@/components/ui/sheet';
 const navItems = [
@@ -52,7 +52,7 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border shadow-lg'
+          ? 'bg-background/80 backdrop-black-lg border-b border-border shadow-lg'
           : 'bg-transparent'
       }`}
     >

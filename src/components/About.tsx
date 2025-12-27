@@ -118,53 +118,11 @@ export const About = () => {
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-2">Shreyas Kulkarni</h1>
               
-              {/* Social Media Links */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.6 }}
-                className="flex gap-4 items-center"
-              >
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:shreyaskulkarni051@gmail.com"
-                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
-                  aria-label="Email"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://your-portfolio.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-card hover:bg-accent transition-colors hover:text-primary"
-                  aria-label="Portfolio"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                </a>
-              </motion.div>
-
               <p className="text-lg text-foreground/80 leading-relaxed">
-                "I'm a 4th-year AIML engineering student at Srinivas Institute of Technology.I'm passionate about technology and love building clean, functional web applications. 
-                I enjoy turning ideas into real products and constantly explore Machine Learning to understand how intelligent systems work.
-                I focus on web development,AI-assisted building, and diving deeper into ML concepts to create smarter digital experiences."
+              "As a fourth-year AIML student at Srinivas Institute of Technology, I’m a motivated learner with a strong passion for AI,
+               Machine Learning, and software development. I’ve led and managed projects, and I enjoy tackling complex problems to build 
+               meaningful solutions. Outside academics,I love finding ways to blend creativity with technology and continually keep growing 
+               as the field advances."
               </p>
 
               {/* Stats */}
